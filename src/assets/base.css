@@ -1,0 +1,92 @@
+html,body,p,dl,dt,dd,table,td,th,input,img,form,div,span,ul,ol,li,h1,h2,h3,h4,h5,h6,select,input {
+  margin: 0;
+  padding: 0;
+  font-weight: normal
+}
+
+html {
+  overflow-y: scroll;
+  margin: 0 auto;
+  height: 100%;
+  width: 960px;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background-color: #ffffff;
+  color: #666666;
+  font-family: Arial,Helvetica,sans-serif
+}
+
+img,iframe {
+  border: none
+}
+
+ul,li,ol {
+  list-style: none
+}
+
+img {
+  vertical-align: top
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+input,button {
+  outline: 0;
+  border-radius: 0;
+  background: transparent
+}
+
+em,b,i,strong,cite,sub,sup,font {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+  outline: none
+}
+
+.clear {
+  clear: both
+}
+
+a,li,input,button,section,span,div {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+  -o-tap-highlight-color: rgba(0,0,0,0);
+  -ms-tap-highlight-color: rgba(0,0,0,0);
+  tap-highlight-color: rgba(0,0,0,0)
+}
+
+::-webkit-input-placeholder {
+  color: #999999
+}
+
+::-moz-placeholder {
+  color: #999999
+}
+
+:-moz-placeholder {
+  color: #999999
+}
+
+.clearfix:before,.MlistA:before,.MlistA .prop:before,.MlistB:before,.MheadingA:before {
+  content: "";
+  display: table
+}
+
+.clearfix:after,.MlistA:after,.MlistA .prop:after,.MlistB:after,.MheadingA:after {
+  content: "";
+  display: table;
+  clear: both
+}
