@@ -29,6 +29,11 @@ export default new Router({
 	      		path: '/vMicro',
 	      		name: 'vMicro',
 	      		component: r => require.ensure([], () => r(require('../components/Microphone')), 'vM-micro')
+	    	},
+	    	{
+	      		path: '/vMove',
+	      		name: 'vMove',
+	      		component: r => require.ensure([], () => r(require('../components/vMove')), 'vM-move')
 	    	}
     	]
   	}]

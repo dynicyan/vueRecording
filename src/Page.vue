@@ -15,6 +15,10 @@ export default {
       msg: 'VUE touchMusic',
       textLists: [
         {
+          name: '律动',
+          link: '/vMove'
+        },
+        {
           name: '录音',
           link: '/vMicro'
         },
