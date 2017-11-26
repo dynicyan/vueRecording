@@ -1,20 +1,39 @@
 <template lang='pug'>
   .movePic
     .imgContainer
-      img(:src="require('../assets/img/iCard.jpg')" ref='imgPz')
-    .imgLiner(:style="{left: leftValue + 'px', top: topValue + 'px'}")
+      img(:src="imgSrc")
+    .imgLiner(:style="{left: leftValue + 'px', top: topValue + 'px'}" v-if='showFlag')
 </template>
 <script>
 export default {
   name: 'vMove',
   data () {
     return {
+      imgSrc: require('../assets/img/iCard.jpg'),
       leftValue: 50,
-      topValue: 85
+      topValue: 85,
+      moveTimer: '',
+      showFlag:true
     }
   },
   created () {
-      console.log(this.$refs.imgPz)
+    let img = new Image()
+    img.src = this.imgSrc
+    console.log(img.width, img.height)
+    this.moveTimer = setInterval(() => {
+      this.leftValue++
+      if (this.leftValue > (img.width - 50)) {
+        this.leftValue = 50
+        this.topValue = this.topValue + 180
+        this.leftValue ++
+        if (this.topValue > (img.height - 85)) {
+          clearInterval(this.moveTimer)
+          this.showFlag = false
+          this.leftValue = 50
+          this.topValue = 85
+        }
+      }
+    }, 10)
   },
   methods: {
 
